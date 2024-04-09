@@ -4,11 +4,9 @@ type: "php:8.0"
 
 build:
     flavor: composer
-    spec: composer.json
 
 relationships:
     database: "mysql:mysql"
 
 mounts:
-    "/public":
-        source: "public"
+    '/public': 'local'
