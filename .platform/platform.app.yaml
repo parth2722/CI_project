@@ -1,0 +1,12 @@
+name: app
+
+type: "php:8.0"
+
+build:
+    flavor: composer
+
+relationships:
+    database: "mysql:mysql"
+
+mounts:
+    '/public': 'local'
