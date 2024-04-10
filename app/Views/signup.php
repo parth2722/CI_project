@@ -12,7 +12,7 @@
     <div class="container mt-5">
         <div class="row justify-content-md-center">
             <div class="col-5">
-                <h2>Register User</h2>
+                <h2>Signup</h2>
                 <?php if (isset($validation)) : ?>
                     <div class="alert alert-warning">
                         <?= $validation->listErrors() ?>
@@ -35,8 +35,7 @@
                         <button type="submit" class="btn btn-dark">Signup</button>
                     </div>
                 </form>
-                <br>
-                <a href="/signin" class="btn btn-primary ">Already have account</a>
+                <a href="/signin" class="btn btn-primary mt-3 ">Already have account</a>
             </div>
         </div>
     </div>

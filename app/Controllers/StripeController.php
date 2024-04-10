@@ -46,13 +46,11 @@ class StripeController extends BaseController
 
         try {
 
-            $refund = \Stripe\Refund::create([
+            \Stripe\Refund::create([
                 'charge' => $chargeId,
                 // 'amount' => 200,
                 'reason' => 'requested_by_customer'
             ]);
-            $balanceTransaction = \Stripe\BalanceTransaction::retrieve($refund->balance_transaction);
-
             return redirect()->back()->with('success', 'successful!');
         } catch (\Stripe\Exception\InvalidRequestException $e) {
             return redirect()->back()->with('error', $e->getMessage());
@@ -75,7 +73,6 @@ class StripeController extends BaseController
         $pdf->SetTitle('Invoice');
         $pdf->SetSubject('Invoice');
         $pdf->SetKeywords('Invoice, TCPDF, PHP, CodeIgniter');
-
 
         $pdf->AddPage();
 

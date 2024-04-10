@@ -2,24 +2,15 @@
 
 <?= $this->section('content') ?>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
-    <!--  -->
-</head>
-
 <body>
-    <div class="container mt-5">
+    <div class="container" style="width: 60%;">
         <?php
         $validation = \Config\Services::validation();
-
         ?>
         <div class="card">
             <div class="card-header">
                 <div class="row">
-                    <div class="col">Sample Data</div>
+                    <div class="col">Add User</div>
                     <div class="col text-right">
                         <a href="/crud" class="btn btn-secondary btn-sm">Back</a>
                     </div>
@@ -37,7 +28,7 @@
                         ?>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mt-2">
                         <label>Email</label>
                         <input type="text" name="email" class="form-control" />
                         <?php
@@ -51,7 +42,7 @@
                         ?>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mt-2">
                         <label>Gender</label>
                         <select name="gender" class="form-control">
                             <option value="">Select Gender</option>
@@ -68,10 +59,10 @@
                         }
                         ?>
                     </div>
-                    <div class="form-group">
-                        <input type="file" name='type'  class="form-control">
+                    <div class="form-group mt-4">
+                        <input type="file" name='type' class="form-control">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-3">
                         <button type="submit" class="btn btn-primary">Add</button>
                     </div>
                 </form>
@@ -81,7 +72,5 @@
     </div>
 
 </body>
-
-
 
 <?= $this->endSection() ?>

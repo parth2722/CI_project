@@ -11,10 +11,6 @@ class Crud extends BaseController
 
 		$crudModel = new CrudModel();
 
-		// $data = [
-		//     'user_data' => $crudModel->paginate(6),
-		//     'pager' => $crudModel->pager
-		// ];
 
 		$data['user_data'] = $crudModel->findAll();
 

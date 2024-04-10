@@ -3,22 +3,15 @@
 <?= $this->section('content') ?>
 
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Codeigniter 4 PDF Example - positronx.io</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-</head>
-
 <body>
-    <div class="container mt-5">
+    <div class="container ">
         <h2>User Listing</h2>
 
         <div class="d-flex flex-row-reverse bd-highlight">
             <div class="col text-right">
                 <a href="/crud" class="btn btn-secondary btn-sm">Back</a>
             </div>
-            <a href="<?php echo base_url('Crud/htmlToPDF') ?>" class="btn btn-primary">
+            <a href="<?php echo base_url('Crud/htmlToPDF') ?>" class="btn btn-primary btn-sm">
                 Download PDF
             </a>
         </div>

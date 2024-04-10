@@ -35,4 +35,4 @@ $routes->post('crud/edit_validation', 'Crud::edit_validation', $filters);
 $routes->get('crud/fetch_single_data/(:num)', 'Crud::fetch_single_data/$1', $filters);
 $routes->get('crud/delete/(:num)', 'Crud::delete/$1', $filters);
 
-service('auth')->routes($routes);
+

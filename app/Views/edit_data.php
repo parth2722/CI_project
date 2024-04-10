@@ -2,20 +2,12 @@
 
 <?= $this->section('content') ?>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
-</head>
-
 <body>
-    <div class="container mt-5">
+    <div class="container" style="width: 60%;">
         <?php
 
         $validation = \Config\Services::validation();
         ?>
-
         <div class="card">
             <div class="card-header">
                 <div class="row">
@@ -42,7 +34,7 @@
                         }
                         ?>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-2">
                         <label>Email</label>
                         <input type="text" name="email" class="form-control" value="<?php echo $user_data['email']; ?>">
 
@@ -57,7 +49,7 @@
                         ?>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mt-2">
                         <label>Gender</label>
                         <select name="gender" class="form-control">
                             <option value="">Select Gender</option>
@@ -75,7 +67,7 @@
                         }
                         ?>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-2">
                         <label>Current Image</label><br>
                         <?php
                         $imagePath = base_url('uploads/' . $user_data['type']);
@@ -83,10 +75,10 @@
                         ?>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mt-2">
                         <input type="file" name='type' class="form-control">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mt-2">
                         <input type="hidden" name="id" value="<?php echo $user_data["id"]; ?>" />
                         <button type="submit" class="btn btn-primary">Edit</button>
                     </div>

@@ -4,10 +4,10 @@
 
 
 <body>
-    <div class="container mt-5">
+    <div class="container">
         <div class="card-header">
 
-            <div class="col">Create Data</div>
+            <div style="text-align: center; font-size: large;">Create Data</div>
             <div class="col text-right">
                 <a href="<?php echo base_url("/crud/add") ?>" class="btn btn-success btn-sm">Create</a>
                 <!-- <br>
@@ -63,11 +63,8 @@
                     <?php endif; ?>
                 </tbody>
             </table>
-
         </div>
     </div>
-
-
     <script>
         $(document).ready(function() {
             $(' #users-list').DataTable();
