@@ -10,5 +10,5 @@ class CrudModel extends Model
 
 	protected $primaryKey = 'id';
 
-	protected $allowedFields = ['name', 'email', 'gender'];
+	protected $allowedFields = ['name','type', 'email', 'gender'];
 }

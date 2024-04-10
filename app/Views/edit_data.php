@@ -10,7 +10,7 @@
 </head>
 
 <body>
-<div class="container mt-5">
+    <div class="container mt-5">
         <?php
 
         $validation = \Config\Services::validation();
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <form method="post" action="<?php echo base_url('crud/edit_validation'); ?>">
+                <form method="post" action="<?php echo base_url('crud/edit_validation'); ?>" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" name="name" class="form-control" value="<?php echo $user_data['name']; ?>">
@@ -75,7 +75,17 @@
                         }
                         ?>
                     </div>
+                    <div class="form-group">
+                        <label>Current Image</label><br>
+                        <?php
+                        $imagePath = base_url('uploads/' . $user_data['type']);
+                        echo '<img src="' . $imagePath . '" width="100" height="100" alt="Current Image">';
+                        ?>
+                    </div>
 
+                    <div class="form-group">
+                        <input type="file" name='type' class="form-control">
+                    </div>
                     <div class="form-group">
                         <input type="hidden" name="id" value="<?php echo $user_data["id"]; ?>" />
                         <button type="submit" class="btn btn-primary">Edit</button>

@@ -3,7 +3,6 @@
 <?= $this->section('content') ?>
 
 
-
 <body>
     <div class="container mt-5">
         <div class="card-header">
@@ -15,8 +14,14 @@
                         <br>
                         <a href="/crud/add" class="btn btn-success btn-sm">Create2</a> -->
                 <a href="<?php echo base_url("/stripe") ?>" class="btn btn-success btn-sm">Checkout</a>
-            </div>
 
+                <a href="<?php echo base_url("/crud/pdf") ?>" class="btn btn-success btn-sm">Demo data</a>
+
+                <a href="<?php echo base_url("/crud/exportCSV") ?>" class="btn btn-success btn-sm">Export to CSV</a>
+
+                <a href="<?php echo base_url("/crud/email_sent") ?>" class="btn btn-success btn-sm">Sent Email</a>
+
+            </div>
         </div>
         <div class="mt-3">
             <table class="table table-bordered" id="users-list">
@@ -26,6 +31,7 @@
                         <th>Name</th>
                         <th>Email</th>
                         <th>Gender</th>
+                        <th>Image</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -45,16 +51,19 @@
                             <td>
                                 <?php echo $user['gender']; ?>
                             </td>
+                            <td>
+                                <img src="<?= base_url("uploads/" . $user['type']) ?>" height="100px" width="100px" alt="Image">
+                            </td>
 
                             <td><a href="<?= base_url('/crud/fetch_single_data/') . $user['id'] ?>" class="btn btn-sm btn-warning">Edit</a>
                                 <button type="button" onclick="delete_data(<?= $user['id'] ?>)" class="btn btn-danger btn-sm">Delete</button>
                             </td>
-
                             </tr>
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </tbody>
             </table>
+
         </div>
     </div>
 

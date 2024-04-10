@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<div class="container mt-5">
+    <div class="container mt-5">
         <?php
         $validation = \Config\Services::validation();
 
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="card-body">
-                <form method="post" action="<?php echo base_url("/crud/add_validation") ?>">
+                <form method="post" action="<?php echo base_url("/crud/add_validation") ?>" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" name="name" class="form-control" />
@@ -66,8 +66,10 @@
                             ' . $validation->getError("gender") . '
                             </div>';
                         }
-
                         ?>
+                    </div>
+                    <div class="form-group">
+                        <input type="file" name='type'  class="form-control">
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary">Add</button>
@@ -79,5 +81,7 @@
     </div>
 
 </body>
+
+
 
 <?= $this->endSection() ?>
