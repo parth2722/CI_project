@@ -5,7 +5,6 @@
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
 </head>
-
 <body>
     <header>
         <nav class="navbar-expand navbar-dark bg-dark">

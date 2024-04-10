@@ -4,17 +4,18 @@
 
 
 <body>
-    <div class="container ">
+    <div class="container" style="width: 60%;">
         <h2>User Listing</h2>
 
         <div class="d-flex flex-row-reverse bd-highlight">
-            <div class="col text-right">
+            <div class="text-right">
                 <a href="/crud" class="btn btn-secondary btn-sm">Back</a>
             </div>
-            <a href="<?php echo base_url('Crud/htmlToPDF') ?>" class="btn btn-primary btn-sm">
-                Download PDF
-            </a>
+
         </div>
+        <a href="<?php echo base_url('Crud/htmlToPDF') ?>" class="btn btn-primary btn-sm">
+            Download PDF
+        </a>
         <table class="table table-striped table-hover mt-4">
             <thead>
                 <tr>
