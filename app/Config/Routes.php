@@ -13,14 +13,11 @@ $routes->get('/signin', 'SigninController::index');
 $routes->get('/logout', 'SigninController::logout');
 $routes->get('/profile', 'ProfileController::index', ['filter' => 'authGuard']);
 
-
-
 $routes->get('/stripe', 'StripeController::index');
 $routes->post('/stripe/create-charge', 'StripeController::createCharge');
 $routes->get('stripe/refund/(:segment)', 'StripeController::refund/$1');
 
 $routes->post('/stripe/generate_invoice', 'StripeController::generate_invoice');
-
 $filters = ['filter' => 'authGuard'];
 $routes->match(['get', 'post'], 'Crud/sendMail', 'Crud::sendMail',$filters);
 $routes->get('crud/email_sent', 'Crud::email_sent', $filters);
