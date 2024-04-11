@@ -18,7 +18,6 @@ class Main extends BaseController
         $this->session = session();
         $this->auth_model = new Auth;
         $this->prod_model = new Product;
-       
         $this->data = ['session' => $this->session, 'request' => $this->request];
     }
 

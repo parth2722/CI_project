@@ -28,6 +28,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
+                        <th>Details</th>
                         <th>Name</th>
                         <th>Email</th>
                         <th>Gender</th>
@@ -41,6 +42,11 @@
 
                             <td>
                                 <?php echo $user['id']; ?>
+                            </td>
+                            <td>
+                                <?php echo $user['name']; ?>
+                                <br>
+                                <img src="<?= base_url("uploads/" . $user['type']) ?>" height="100px" width="100px" alt="Image">
                             </td>
                             <td>
                                 <?php echo $user['name']; ?>

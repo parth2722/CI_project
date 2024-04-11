@@ -1,6 +1,7 @@
 <?= $this->extend('menus') ?>
 
 <?= $this->section('content') ?>
+<div class="container">
 <div class="card rounded-0">
     <div class="card-header">
         <div class="d-flex w-100 justify-content-between">
@@ -59,5 +60,6 @@
             </form>
         </div>
     </div>
+</div>
 </div>
 <?= $this->endSection() ?>
