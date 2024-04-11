@@ -44,10 +44,13 @@
                                 <?php echo $user['id']; ?>
                             </td>
                             <td>
-                                <?php echo $user['name']; ?>
+                                <a href="<?= base_url('/crud/fetch_single_data/') . $user['id'] ?>">
+                                    <?php echo $user['name']; ?>
+                                </a>
                                 <br>
                                 <img src="<?= base_url("uploads/" . $user['type']) ?>" height="100px" width="100px" alt="Image">
                             </td>
+
                             <td>
                                 <?php echo $user['name']; ?>
                             </td>
